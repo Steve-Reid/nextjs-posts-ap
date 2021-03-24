@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Post from '@components/Post';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -14,30 +15,24 @@ export default function Home() {
 
         <ul className={styles.posts}>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all
-              of my tweets!
-            </p>
-            <p className={styles.postsDate}>14/3/2021</p>
+            <Post content="This is a new post" date="22/3/2021" />
           </li>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all
-              of my tweets!
-            </p>
-            <p className={styles.postsDate}>14/3/2021</p>
+            <Post
+              content="I’m working in Figma trying to design a new website that shows all of my tweets!"
+              date="22/3/2021"
+            />
           </li>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all
-              of my tweets!
-            </p>
-            <p className={styles.postsDate}>14/3/2021</p>
+            <Post
+              content="I’m working in Figma trying to design a new website that shows all of my tweets!"
+              date="22/3/2021"
+            />
           </li>
         </ul>
 
         <form>
-          <textarea className={styles.formContent}></textarea>
+          <textarea className={styles.formContent} />
           <button className={styles.formButton}>Add New Post</button>
         </form>
       </main>
