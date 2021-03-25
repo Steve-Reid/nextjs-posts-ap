@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Post from '@components/Post';
+import PostForm from '@components/PostForm';
+import Bio from '@components/Bio';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -11,7 +13,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>My Posts</h1>
+        <Bio
+          imagePath="https://pbs.twimg.com/profile_images/503598295365599232/jL6ZtIhR_400x400.jpeg"
+          name="Steve Reid"
+          tagline="Learning by doing!"
+          position="Fullstack Developer @ On The Money Ltd"
+        />
 
         <ul className={styles.posts}>
           <li>
@@ -31,10 +38,7 @@ export default function Home() {
           </li>
         </ul>
 
-        <form>
-          <textarea className={styles.formContent} />
-          <button className={styles.formButton}>Add New Post</button>
-        </form>
+        <PostForm />
       </main>
     </div>
   );
